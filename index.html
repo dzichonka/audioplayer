@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- <audio controls>
+    <source src="./assets/audio/stromae.mp3" type="audio/mpeg">
+    <source src="./assets/audio/palina.mp3" type="audio/mpeg">
+    <source src="./assets/audio/jain.mp3" type="audio/mpeg">
+    Your browser does not support the audio element &#128532;
+  </audio> -->
+  <div class="container">
+    <main>
+      <h1 class="intro">Music Player<br>
+        <span>A desktop application</span>
+      </h1>
+      <div class="audio-player">
+        <div class="volume-controls">
+          <div class="">volume</div>
+          <button class="btn-volume" id="volume-down"><svg width="22" height="3" viewbox="0 0 22 3" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <line x1="1.73875" y1="1.81213" x2="20.7265" y2="1.81213" stroke="#DEE1EF" stroke-opacity="0.48"
+                stroke-width="1.69138" stroke-linecap="round" />
+            </svg></button>
+          <button class="btn-volume" id="volume-up">
+            <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1.26752 9.64329C0.800468 9.64112 0.420084 10.018 0.417913 10.485C0.415742 10.9521 0.792605 11.3325 1.25966 11.3346L9.40681 11.3725L9.36428 20.5216C9.36211 20.9886 9.73897 21.369 10.206 21.3712C10.6731 21.3734 11.0535 20.9965 11.0556 20.5295L11.0982 11.3804L20.2472 11.4229C20.7143 11.4251 21.0947 11.0482 21.0968 10.5812C21.099 10.1141 20.7221 9.73373 20.2551 9.73156L11.106 9.68902L11.1439 1.5419C11.1461 1.07485 10.7692 0.694463 10.3022 0.692292C9.8351 0.690121 9.45472 1.06698 9.45254 1.53404L9.41467 9.68116L1.26752 9.64329Z"
+                fill="white" fill-opacity="0.48" />
+            </svg>
+          </button>
+        </div>
+        <div class="track-info">
+          <div class="cover-wrapper"><img id="cover" src="./assets/img/lenfer.jpg" alt="Cover"></div>
+          <h2 id="title">L'enfer</h2>
+          <h3 id="artist">Stromae</h3>
+        </div>
+
+        <audio id="audio" src="./assets/audio/stromae.mp3">Your browser does not support the audio element
+          &#128532;</audio>
+
+        <div class="controls">
+          <button class="btn-arrow" id="prev-track"><svg width="30" height="38" viewbox="0 0 30 38" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M27.8514 1.1163C28.5164 0.679887 29.4 1.15693 29.4 1.95235V36.0476C29.4 36.843 28.5164 37.3201 27.8514 36.8837L2.60003 20.3125V36C2.60003 36.5523 2.15232 37 1.60003 37C1.04775 37 0.600035 36.5523 0.600035 36L0.600037 2.00002C0.600037 1.44773 1.04775 1.00002 1.60004 1.00002C2.15232 1.00002 2.60004 1.44773 2.60004 2.00002V17.6875L27.8514 1.1163Z"
+                fill="white" fill-opacity="0.48" />
+            </svg></button>
+          <button class="btn-play" id="play-pause">ii
+            <svg width="32" height="41" viewox="0 0 32 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.133876 39.2765C0.13658 40.0678 1.01372 40.5427 1.67775 40.1123L30.6255 21.3505C31.2362 20.9548 31.2331 20.0601 30.6198 19.6685L1.54447 1.10503C0.877514 0.679201 0.00363977 1.16001 0.00634346 1.9513L0.133876 39.2765Z"
+                fill="white" fill-opacity="0.41" />
+            </svg>
+          </button>
+          <button class="btn-arrow" id="next-track"><svg width="30" height="38" viewbox="0 0 30 38" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M2.14875 1.1163C1.48375 0.679887 0.600098 1.15693 0.600098 1.95235V36.0476C0.600098 36.843 1.48375 37.3201 2.14875 36.8837L27.4001 20.3125V36C27.4001 36.5523 27.8478 37 28.4001 37C28.9524 37 29.4001 36.5523 29.4001 36L29.4001 2.00002C29.4001 1.44773 28.9524 1.00002 28.4001 1.00002C27.8478 1.00002 27.4001 1.44773 27.4001 2.00002V17.6875L2.14875 1.1163Z"
+                fill="white" fill-opacity="0.48" />
+            </svg></button>
+
+          <!-- <span id="current-time">0:00</span> / <span id="duration">0:00</span> -->
+
+          <!-- <input type="range" id="volume-bar" value="1" min="0" max="1" step="0.01"> -->
+
+        </div>
+        <input class="slider" type="range" id="playing" value="0" min="0" max="100">
+        <div class="time"><span id="current-time">0:00</span> / <span id="duration">0:00</span></div>
+        <button id="toggle-playlist"><svg width="18" height="14" viewbox="0 0 18 14" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.83167 8.00646e-08C1.0405 4.54817e-08 0.562658 0.875246 0.990487 1.54076L8.15882 12.6915C8.55246 13.3038 9.44754 13.3038 9.84118 12.6915L17.0095 1.54076C17.4373 0.875247 16.9595 7.41323e-07 16.1683 7.0674e-07L1.83167 8.00646e-08Z"
+              fill="white" fill-opacity="0.41" />
+          </svg> More Music <svg width="18" height="14" viewbox="0 0 18 14" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.83167 8.00646e-08C1.0405 4.54817e-08 0.562658 0.875246 0.990487 1.54076L8.15882 12.6915C8.55246 13.3038 9.44754 13.3038 9.84118 12.6915L17.0095 1.54076C17.4373 0.875247 16.9595 7.41323e-07 16.1683 7.0674e-07L1.83167 8.00646e-08Z"
+              fill="white" fill-opacity="0.41" />
+          </svg></button>
+
+        <div class="playlist hidden"></div>
+
+        <!-- <div class="playlist">
+                  <button class="track-btn" data-src="./assets/audio/stromae.mp3" data-title="L'enfer" data-artist="Stromae"
+                    data-cover="./assets/img/lenfer.jpg">Track 1</button>
+                  <button class="track-btn" data-src="./assets/audio/palina.mp3" data-title="Як ты" data-artist="Palina"
+                    data-cover="./assets/img/jak-ty.jpg">Track 2</button>
+                  <button class="track-btn" data-src="./assets/audio/jain.mp3" data-title="Makeba" data-artist="Jain"
+                    data-cover="./assets/img/makeba.jpg">Track 3</button>
+                </div> -->
+      </div>
+    </main>
+    <footer>
+      <div class="github-link"><a href="https://github.com/dzichonka" target="_blank"
+          rel="noopener noreferrer">@dzichonka</a></div>
+      <div class="rs-link"><a href="https://rs.school/courses/javascript-preschool-ru" target="_blank"
+          rel="noopener noreferrer"><svg viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_5701_38384)">
+              <circle cx="32" cy="32" r="32" fill="black" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13 21.5095V42.5L19.3067 42.4621V33.9474C20.0567 33.9474 20.7616 33.9775 21.4049 34.4267C21.8946 34.8785 22.2838 35.4335 22.546 36.054L25.9202 42.4621H33C31.5957 39.6675 30.4706 36.1327 28.0552 34.0104C27.5455 33.6749 26.9919 33.4158 26.411 33.241C27.1873 33.0779 27.9357 32.7973 28.6319 32.4084C30.3855 31.3375 31.3915 29.3808 31.3436 27.3374C31.3798 26.1328 31.0495 24.9466 30.3988 23.9441C28.9256 21.6883 25.9337 21.4213 23.4663 21.5095H13ZM21.9939 30.0116H19.3313V25.6975H22.1043C23.4807 25.5594 25.1814 26.1754 25.0859 27.8041C25.1499 29.5621 23.3647 29.9127 21.9939 30.0116Z"
+                fill="#FFB749" />
+              <path
+                d="M39.4768 35.089L33 35.4666C33.1262 37.3671 34.0021 39.16 35.4636 40.5088C36.9117 41.8323 39.5076 42.4941 43.2515 42.4941C46.3564 42.5823 49.9058 41.8146 51.821 39.1569C52.5929 38.0934 53.0033 36.8427 52.9998 35.564C53.0217 33.1848 51.4339 31.2297 49.3044 30.3147C47.2632 29.4766 45.1198 28.8674 42.9204 28.5C42.1107 28.41 41.3327 28.1563 40.6423 27.757C39.9039 27.2597 40.078 26.2272 40.735 25.7596C42.6084 24.5207 45.6299 25.5545 45.8608 27.9032L52.2845 27.5621C52.1703 25.768 51.1844 24.0545 49.6356 22.9583C47.6987 21.8887 45.4532 21.3874 43.1986 21.5212C41.3493 21.4527 39.5037 21.7218 37.7682 22.3128C35.6082 23.1125 33.829 25.064 33.8344 27.4525C33.7931 28.9377 34.5158 30.4088 35.755 31.3621C37.6454 32.6238 39.8325 33.4582 42.139 33.798C43.3833 33.9637 44.5727 34.3795 45.6224 35.0159C46.5878 35.7309 46.5807 37.167 45.5959 37.8903C44.5078 38.6532 42.9034 38.7416 41.6818 38.2468C40.3717 37.716 39.6048 36.4784 39.4768 35.089Z"
+                fill="#FFB749" />
+            </g>
+            <defs>
+              <clippath id="clip0_5701_38384">
+                <rect width="64" height="64" fill="white" />
+              </clippath>
+            </defs>
+          </svg></a></div>
+
+      <div class="year">2024</div>
+
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

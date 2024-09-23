@@ -1,0 +1,274 @@
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1;
+
+}
+
+body {
+    background: $bg-color;
+}
+
+.container {
+    padding: 0 30px;
+
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px;
+    margin: 0 auto;
+    font-size: 96px;
+    color: $light-color;
+    line-height: 0.25;
+
+    span {
+        text-align: left;
+        padding: 6px;
+        font-size: 18px;
+    }
+}
+
+button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+
+    &:hover {
+        scale: 1.1;
+    }
+}
+
+.btn-volume {
+    width: 40px;
+    height: 40px;
+}
+
+.btn-arrow {
+    width: 60px;
+    height: 60px;
+}
+
+.btn-play {
+    color: rgba(0, 0, 0, 0.0);
+    width: 90px;
+    height: 90px;
+}
+
+
+.audio-player {
+    border-radius: 30px;
+    max-width: 414px;
+    box-shadow: 2px 4px 9px 0 rgba(0, 0, 0, 0.25);
+    background: $main-gradient;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.volume-controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgba(255, 255, 255, 0.49);
+    font-size: 24px;
+}
+
+.track-info {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 40px;
+    color: $light-color;
+}
+
+.cover-wrapper {
+    width: 340px;
+    height: 340px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        border: 40px solid rgba(44, 15, 15, 0.5);
+        pointer-events: none;
+    }
+}
+
+#cover {
+    padding: 20px;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+}
+
+#artist {
+    font-size: 32px;
+}
+
+.controls {
+    margin: 30px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+
+    appearance: none;
+    width: 100%;
+    height: 5px;
+
+    border-radius: 5px;
+
+    background: #b1b1b1;
+
+    overflow: hidden;
+    outline: none;
+
+    &::-webkit-slider-thumb {
+        appearance: none;
+        box-shadow: -200px 0 0 190px $light-color;
+        width: 10px;
+        height: 15px;
+
+        border-radius: 50%;
+        background: $bg-color;
+        cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+        appearance: none;
+        box-shadow: -200px 0 0 190px $light-color;
+        width: 10px;
+        height: 15px;
+        border: 0;
+        border-radius: 50%;
+        background: $bg-color;
+        cursor: pointer;
+    }
+}
+
+.time {
+    text-align: center;
+    padding-top: 10px;
+    color: $light-color;
+    opacity: 0.5;
+}
+
+.hidden {
+    display: none;
+}
+
+#toggle-playlist {
+    all: unset;
+    display: block;
+    margin: 0 auto;
+    font-size: 28px;
+    color: $light-color;
+    opacity: 0.5;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.playlist {
+    text-align: center;
+    margin-top: 20px;
+
+
+    & button {
+
+        all: unset;
+        display: block;
+        color: $light-color;
+        margin: 0 auto;
+        width: 100%;
+        color: $light-color;
+        opacity: 0.5;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+}
+
+footer {
+    padding: 30px;
+    gap: 30px;
+    margin: 50px;
+    //height: 100%;
+    background: $main-gradient;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github-link {
+    flex: 1;
+
+    & a {
+        text-decoration: none;
+        color: $light-color;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: all 0.5s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.rs-link {
+    flex: 1;
+    opacity: 0.5;
+    max-height: 50px;
+    max-width: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.year {
+    text-align: right;
+    flex: 1;
+    color: $light-color;
+    opacity: 0.5;
+}

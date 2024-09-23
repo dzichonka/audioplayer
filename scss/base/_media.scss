@@ -1,0 +1,71 @@
+@media (max-width: 768px) {
+  .intro {
+    font-size: 56px;
+
+    span {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .intro {
+    padding: 30px 10px;
+    font-size: 56px;
+    line-height: 0.7;
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .cover-wrapper {
+    width: 240px;
+    height: 240px;
+
+    &::before {
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  #cover {
+    padding: 20px;
+    width: 240px;
+    height: 240px;
+  }
+
+  #title {
+    font-size: 32px;
+  }
+
+  #artist {
+    font-size: 24px;
+  }
+
+  .controls {
+    margin: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #toggle-playlist {
+
+    font-size: 18px;
+  }
+
+  footer {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .rs-link {
+    flex: 1;
+    opacity: 0.5;
+    height: 50px;
+    width: 50px;
+
+  }
+}

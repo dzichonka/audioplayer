@@ -1,0 +1,20 @@
+[
+  {
+    "src": "./assets/audio/stromae.mp3",
+    "title": "L'enfer",
+    "artist": "Stromae",
+    "cover": "./assets/img/lenfer.jpg"
+  },
+  {
+    "src": "./assets/audio/palina.mp3",
+    "title": "Як ты",
+    "artist": "Palina",
+    "cover": "./assets/img/jak-ty.jpg"
+  },
+  {
+    "src": "./assets/audio/jain.mp3",
+    "title": "Makeba",
+    "artist": "Jain",
+    "cover": "./assets/img/makeba.jpg"
+  }
+]
