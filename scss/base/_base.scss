@@ -8,7 +8,6 @@
     font-weight: 400;
     text-align: left;
     line-height: 1;
-
 }
 
 body {
@@ -16,19 +15,26 @@ body {
 }
 
 .container {
-    padding: 0 30px;
-
+    padding: 30px;
     max-width: 1140px;
+    height: 100vh;
     margin: 0 auto;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .intro {
     text-align: center;
-    padding: 50px;
+    padding: 50px 10px;
     margin: 0 auto;
     font-size: 96px;
     color: $light-color;
-    line-height: 0.25;
+    line-height: 0.8;
 
     span {
         text-align: left;
